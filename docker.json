@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Preset for use with all of thegeeklab/* docker images"],
+  "extends": ["github>thegeeklab/renovate-presets:base"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
+      ]
+    }
+  ]
+}
