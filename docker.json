@@ -2,6 +2,22 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": ["Preset for use with all of thegeeklab/* docker images"],
   "extends": ["github>thegeeklab/renovate-presets:base"],
+  "packageRules": [
+    {
+      "description": "Automerge digest updates (usually security patches)",
+      "datasources": ["docker"],
+      "packagePatterns": [
+        "^amd64/python",
+        "^arm.*/python",
+        "^python",
+        "^amd64/alpine",
+        "^arm.*/alpine",
+        "^alpine"
+      ],
+      "updateTypes": ["pin", "digest"],
+      "automerge": true
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
