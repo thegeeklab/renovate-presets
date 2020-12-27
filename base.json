@@ -12,7 +12,7 @@
     "group:linters"
   ],
   "docker": {
-    "pinDigests": false
+    "pinDigests": true
   },
   "regexManagers": [
     {
