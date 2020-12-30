@@ -13,6 +13,12 @@
       ],
       "updateTypes": ["pin", "digest"],
       "automerge": true
+    },
+    {
+      "description": "Disable digest pinning for Docker Compose (development only)",
+      "managers": ["docker-compose"],
+      "updateTypes": ["pin", "digest"],
+      "enabled": false
     }
   ],
   "regexManagers": [
