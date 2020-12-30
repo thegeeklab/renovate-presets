@@ -8,7 +8,8 @@
       "datasources": ["docker"],
       "packagePatterns": [
         "^((amd64|arm32v7|arm64v8)/)?python",
-        "^((amd64|arm32v7|arm64v8)/)?alpine"
+        "^((amd64|arm32v7|arm64v8)/)?alpine",
+        "^thegeeklab/(alpine|nginx)"
       ],
       "updateTypes": ["pin", "digest"],
       "automerge": true
