@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Preset for use with ansible repositories"],
+  "extends": ["github>thegeeklab/renovate-presets:base"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^(group_vars|services)/.*?$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n(?<roleName>\\S+?)_version: \"?(?<currentValue>.*?)\"?\\s"
+      ]
+    }
+  ]
+}
