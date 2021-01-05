@@ -17,7 +17,7 @@
   "packageRules": [
     {
       "description": "Automerge docs theme updates",
-      "datasources": ["docker"],
+      "datasources": ["github-releases"],
       "packagePatterns": [
         "^thegeeklab/hugo-geekdoc"
       ],
