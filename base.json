@@ -14,6 +14,17 @@
   "docker": {
     "pinDigests": true
   },
+  "packageRules": [
+    {
+      "description": "Automerge docs theme updates",
+      "datasources": ["docker"],
+      "packagePatterns": [
+        "^thegeeklab/hugo-geekdoc"
+      ],
+      "updateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": ["^Makefile$"],
