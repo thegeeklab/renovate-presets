@@ -23,6 +23,11 @@
       ],
       "updateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true
     }
   ],
   "regexManagers": [
