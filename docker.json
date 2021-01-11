@@ -7,7 +7,7 @@
       "description": "Automerge digest updates (usually security patches)",
       "datasources": ["docker"],
       "packagePatterns": [
-        "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node)",
+        "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker)",
         "^thegeeklab/(alpine|nginx)"
       ],
       "updateTypes": ["pin", "digest"],
