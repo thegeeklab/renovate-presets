@@ -15,6 +15,15 @@
       "automerge": true
     },
     {
+      "description": "Helper tools for docker base images",
+      "groupName": "docker helper tools",
+      "matchDatasources": ["github-releases"],
+      "matchPaths": ["Dockerfile"],
+      "matchPackagePatterns": ["^hairyhenderson", "^aptible", "^thegeeklab"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
       "description": "Disable digest pinning for Docker Compose (development only)",
       "matchManagers": ["docker-compose"],
       "matchUpdateTypes": ["pin", "digest"],
