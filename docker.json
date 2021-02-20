@@ -5,18 +5,19 @@
   "packageRules": [
     {
       "description": "Automerge digest updates (usually security patches)",
-      "datasources": ["docker"],
-      "packagePatterns": [
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": [
         "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker)",
         "^thegeeklab/(alpine|nginx)"
       ],
-      "updateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "digest"],
       "automerge": true
     },
     {
       "description": "Disable digest pinning for Docker Compose (development only)",
-      "managers": ["docker-compose"],
-      "updateTypes": ["pin", "digest"],
+      "matchManagers": ["docker-compose"],
+      "matchUpdateTypes": ["pin", "digest"],
       "enabled": false
     }
   ],

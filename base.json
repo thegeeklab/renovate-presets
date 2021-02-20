@@ -16,16 +16,16 @@
   "packageRules": [
     {
       "description": "Automerge docs theme updates",
-      "datasources": ["github-releases"],
-      "packagePatterns": [
-        "^thegeeklab/hugo-(geekdoc|geekblog)"
-      ],
-      "updateTypes": ["minor", "patch"],
+      "matchDatasources": ["github-releases"],
+      "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
     {
-      "depTypeList": ["devDependencies", "dev-dependencies"],
-      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "description": "Automerge dev dependencies",
+      "groupName": "devDependencies (non-major)",
+      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true
     }
   ],
