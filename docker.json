@@ -24,10 +24,9 @@
       "automerge": true
     },
     {
-      "description": "Disable digest pinning for Docker Compose (development only)",
+      "description": "Disable digest pinning for Compose (development only)",
       "matchManagers": ["docker-compose"],
-      "matchUpdateTypes": ["pin", "digest"],
-      "enabled": false
+      "pinDigests": true
     }
   ],
   "regexManagers": [
