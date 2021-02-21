@@ -26,7 +26,7 @@
     {
       "description": "Disable digest pinning for Compose (development only)",
       "matchManagers": ["docker-compose"],
-      "pinDigests": true
+      "pinDigests": false
     }
   ],
   "regexManagers": [
