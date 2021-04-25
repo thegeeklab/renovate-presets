@@ -4,8 +4,5 @@
   "extends": [
     "github>thegeeklab/renovate-presets:base",
     "github>thegeeklab/renovate-presets:docker"
-  ],
-  "gomod": {
-    "postUpdateOptions": ["gomodUpdateImportPaths"]
-  }
+  ]
 }
