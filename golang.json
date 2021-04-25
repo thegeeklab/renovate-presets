@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Preset for use with golang repositories"],
+  "extends": [
+    "github>thegeeklab/renovate-presets:base",
+    "github>thegeeklab/renovate-presets:docker"
+  ],
+  "gomod": {
+    "postUpdateOptions": ["gomodUpdateImportPaths", "gomodTidy"]
+  }
+}
