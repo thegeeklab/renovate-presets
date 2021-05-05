@@ -8,7 +8,8 @@
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
     ":masterIssue",
-    "group:linters"
+    "group:linters",
+    ":maintainLockFilesWeekly"
   ],
   "docker": {
     "pinDigests": true
