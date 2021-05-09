@@ -7,6 +7,13 @@
       "description": "Automerge digest updates (usually security patches)",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pin", "digest"],
+      "commitMessageExtra": ""
+    },
+    {
+      "description": "Automerge digest updates (usually security patches)",
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
       "matchPackagePatterns": [
         "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker)",
         "^thegeeklab/(alpine|nginx)"
