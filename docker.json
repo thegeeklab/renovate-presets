@@ -4,11 +4,11 @@
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "packageRules": [
     {
-      "description": "Automerge digest updates (usually security patches)",
+      "description": "Set semantic commit scope for Docker digests",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["pin", "digest"],
-      "commitMessageExtra": ""
+      "semanticCommitScope": "docker"
     },
     {
       "description": "Automerge digest updates (usually security patches)",
