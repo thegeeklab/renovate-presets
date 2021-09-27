@@ -38,7 +38,5 @@
       ]
     }
   ],
-  "droneci": {
-    "enabled": false
-  }
+  "ignorePaths": ["**/.drone.*"]
 }
