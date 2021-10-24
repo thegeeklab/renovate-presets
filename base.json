@@ -36,6 +36,12 @@
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
       ]
+    },
+    {
+      "fileMatch": [".drone.env"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
+      ]
     }
   ],
   "ignorePaths": ["**/.drone.*"]
