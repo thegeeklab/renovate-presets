@@ -27,7 +27,8 @@
       "groupName": "devDependencies (non-major)",
       "matchDepTypes": ["devDependencies", "dev-dependencies"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
-      "automerge": true
+      "automerge": true,
+      "extends": ["schedule:weekly"]
     }
   ],
   "regexManagers": [
