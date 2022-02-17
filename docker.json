@@ -15,7 +15,7 @@
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
       "matchPackagePatterns": [
-        "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux)",
+        "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux|centos)",
         "^thegeeklab/(alpine|nginx)"
       ],
       "matchUpdateTypes": ["pin", "digest"],
