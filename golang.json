@@ -17,6 +17,14 @@
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
       "extends": ["schedule:weekly"]
+    },
+    {
+      "description": "Schedule high frequency packages",
+      "groupName": "golang high fequency (non-major)",
+      "matchDatasources": ["go"],
+      "matchPackagePatterns": ["urfave/cli"],
+      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "extends": ["schedule:weekly"]
     }
   ]
 }
