@@ -4,7 +4,10 @@
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "regexManagers": [
     {
-      "fileMatch": ["^(group_vars|services)/.*?$"],
+      "fileMatch": [
+        "^(group_vars|services)/.*?$",
+        "^inventory/group_vars/.*?$"
+      ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n(?<roleName>\\S+?)_version: \"?(?<currentValue>.*?)\"?\\s"
       ]
