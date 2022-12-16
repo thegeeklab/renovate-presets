@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Preset for use with kubernetes repositories"],
+  "extends": ["github>thegeeklab/renovate-presets:base"],
+  "flux": {
+    "fileMatch": ["flux/.+\\.yaml$"]
+  },
+  "packageRules": [
+    {
+      "description": "Set semantic commit scope for Docker digests",
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pin", "digest"],
+      "semanticCommitScope": "docker"
+    },
+    {
+      "description": "Automerge digest updates (usually security patches)",
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["^hetznercloud/hcloud-cloud-controller-manager"],
+      "matchUpdateTypes": ["pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^flux/.+\\.yaml$",
+        "^ansible/services/.+/templates/.+\\.yaml.j2$"
+      ],
+      "matchStrings": [
+        "# renovate:\\n\\s+image:\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"']+)\"?'?"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
