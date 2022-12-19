@@ -7,7 +7,7 @@
   },
   "packageRules": [
     {
-      "description": "Set semantic commit scope for Docker digests",
+      "description": "Set semantic commit scope for docker digests",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["pin", "digest"],
@@ -24,10 +24,7 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": [
-        "^flux/.+\\.yaml$",
-        "^ansible/services/.+/templates/.+\\.yaml.j2$"
-      ],
+      "fileMatch": ["^flux/.+\\.yaml$"],
       "matchStrings": [
         "# renovate:\\n\\s+image:\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"']+)\"?'?"
       ],
