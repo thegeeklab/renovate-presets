@@ -25,7 +25,7 @@
       "description": "Helper tools for docker base images",
       "groupName": "docker helper tools",
       "matchDatasources": ["github-releases"],
-      "matchPaths": ["Dockerfile"],
+      "matchPaths": ["Dockerfile*", "docker/Dockerfile*"],
       "matchPackagePatterns": ["^hairyhenderson", "^aptible", "^thegeeklab"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
