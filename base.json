@@ -25,7 +25,7 @@
     {
       "description": "Automerge dev dependencies",
       "groupName": "devDependencies (non-major)",
-      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
       "extends": ["schedule:weekly"]
