@@ -26,10 +26,9 @@
     {
       "fileMatch": ["^flux/.+\\.yaml$"],
       "matchStrings": [
-        "# renovate:\\n\\s+image:\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"']+?)\"?'?\\s"
+        "# renovate:\\n\\s+(image|imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"']+?)\"?'?\\s"
       ],
-      "datasourceTemplate": "docker",
-      "pinDigests": true
+      "datasourceTemplate": "docker"
     }
   ]
 }
