@@ -11,7 +11,7 @@
     "group:linters",
     ":maintainLockFilesWeekly"
   ],
-  "branchNameStrict": true,
+  "branchNameStrict": false,
   "docker": {
     "pinDigests": true
   },
