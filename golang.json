@@ -10,8 +10,8 @@
   },
   "packageRules": [
     {
-      "description": "Automerge golang dev tools",
-      "groupName": "golang dev tools (non-major)",
+      "description": "Automerge golang dev dependencies",
+      "groupName": "golang devDeps non-major",
       "matchDatasources": ["github-releases"],
       "matchPackageNames": ["mvdan/gofumpt", "golangci/golangci-lint"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
@@ -20,7 +20,7 @@
     },
     {
       "description": "Schedule high frequency packages",
-      "groupName": "golang high fequency (non-major)",
+      "groupName": "golang highFeq non-major",
       "matchDatasources": ["go"],
       "matchPackagePatterns": ["urfave/cli"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
