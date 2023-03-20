@@ -3,7 +3,13 @@
   "description": ["Preset for use with kubernetes repositories"],
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "flux": {
-    "fileMatch": ["flux/.+\\.yaml$"]
+    "fileMatch": ["flux/.+patch.*\\.ya?ml$"]
+  },
+  "helm-values": {
+    "fileMatch": ["flux/.+patch.*\\.ya?ml$"]
+  },
+  "kubernetes": {
+    "fileMatch": ["flux/.+patch(Deployment)\\.ya?ml$"]
   },
   "packageRules": [
     {
@@ -20,15 +26,11 @@
       "matchPackagePatterns": ["^hetznercloud/hcloud-cloud-controller-manager"],
       "matchUpdateTypes": ["pin", "digest"],
       "automerge": true
-    }
-  ],
-  "regexManagers": [
+    },
     {
-      "fileMatch": ["^flux/.+\\.yaml$"],
-      "matchStrings": [
-        "# renovate:\\n\\s+(image|imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"']+?)\"?'?\\s"
-      ],
-      "datasourceTemplate": "docker"
+      "description": "Disable kubernetes-api datasource",
+      "datasources": ["kubernetes-api"],
+      "enabled": false
     }
   ]
 }
