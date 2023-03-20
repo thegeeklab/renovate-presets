@@ -3,13 +3,16 @@
   "description": ["Preset for use with kubernetes repositories"],
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "flux": {
-    "fileMatch": ["flux/.+patch.*\\.ya?ml$"]
+    "fileMatch": [
+      "flux/.+patch(HelmRelease)\\.ya?ml$",
+      "flux/.+flux-system/.*gotk-.*\\.ya?ml$"
+    ]
   },
   "helm-values": {
-    "fileMatch": ["flux/.+patch.*\\.ya?ml$"]
+    "fileMatch": ["flux/.+patch(HelmRelease)\\.ya?ml$"]
   },
   "kubernetes": {
-    "fileMatch": ["flux/.+patch(Deployment)\\.ya?ml$"]
+    "fileMatch": ["flux/.+patch(Deployment|Cluster)\\.ya?ml$"]
   },
   "packageRules": [
     {
