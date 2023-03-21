@@ -8,8 +8,8 @@
       "flux/(.+/)gotk-components\\.ya?ml$"
     ]
   },
-  "helm-values": {
-    "fileMatch": ["flux/(.+/)patch(HelmRelease)\\.ya?ml$"]
+  "kubernetes": {
+    "fileMatch": ["flux/(.+/)patch(Deployment|Cluster)\\.ya?ml$"]
   },
   "packageRules": [
     {
