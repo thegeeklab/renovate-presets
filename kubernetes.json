@@ -4,9 +4,16 @@
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "flux": {
     "fileMatch": [
+      "flux/(.+/)release\\.ya?ml$",
       "flux/(.+/)patch(HelmRelease)\\.ya?ml$",
       "flux/(.+/)gotk-components\\.ya?ml$"
     ]
+  },
+  "helm-values": {
+    "fileMatch": ["flux/(.+/)patch(HelmRelease)\\.ya?ml$"]
+  },
+  "kubernetes": {
+    "fileMatch": ["flux/(.+/)patch(Deployment|Cluster)\\.ya?ml$"]
   },
   "packageRules": [
     {
