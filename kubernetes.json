@@ -6,7 +6,8 @@
     "fileMatch": ["flux/.+\\.ya?ml$"]
   },
   "helm-values": {
-    "fileMatch": ["flux/(.+/)patch(HelmRelease)\\.ya?ml$"]
+    "fileMatch": ["flux/(.+/)patch(HelmRelease)\\.ya?ml$"],
+    "pinDigests": true
   },
   "kubernetes": {
     "fileMatch": ["flux/(.+/)patch(Deployment|Cluster)\\.ya?ml$"]
