@@ -38,10 +38,9 @@
     {
       "fileMatch": ["flux/(.+/)patch(Cluster)\\.ya?ml$"],
       "matchStrings": [
-        "^\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
+        "^\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
       ],
-      "datasourceTemplate": "docker",
-      "pinDigests": true
+      "datasourceTemplate": "docker"
     }
   ]
 }
