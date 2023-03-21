@@ -8,9 +8,6 @@
       "flux/(.+/)gotk-components\\.ya?ml$"
     ]
   },
-  "kubernetes": {
-    "fileMatch": ["flux/(.+/)patch(Deployment|Cluster)\\.ya?ml$"]
-  },
   "packageRules": [
     {
       "description": "Set semantic commit scope for docker digests",
