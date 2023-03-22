@@ -40,7 +40,8 @@
       "matchStrings": [
         "\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
       ],
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "pinDigests": true
     }
   ]
 }
