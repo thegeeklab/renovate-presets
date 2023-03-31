@@ -32,11 +32,6 @@
       "description": "Disable kubernetes-api datasource",
       "datasources": ["kubernetes-api"],
       "enabled": false
-    },
-    {
-      "matchDatasources": ["docker"],
-      "matchPaths": ["flux/**/patchCluster.yaml"],
-      "pinDigests": true
     }
   ],
   "regexManagers": [
