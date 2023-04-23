@@ -41,6 +41,14 @@
         "\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
       ],
       "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^flux/crds/.+\\.ya?ml$"],
+      "matchStrings": [
+        "# renovate: registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*)\\s.+k8up-(?<currentValue>.*?)/.+"
+      ],
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}helm{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
