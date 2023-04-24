@@ -36,13 +36,13 @@
     {
       "fileMatch": ["^Makefile$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
       ]
     },
     {
       "fileMatch": [".drone.env"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
       ]
     }
   ],
