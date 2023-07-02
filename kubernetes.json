@@ -6,11 +6,13 @@
     "fileMatch": ["^flux/.+\\.ya?ml$"]
   },
   "helm-values": {
-    "fileMatch": ["^flux/(.+/)patch(HelmRelease)\\.ya?ml$"],
+    "fileMatch": ["^flux/(.+/)patches/(helmRelease)\\.ya?ml$"],
     "pinDigests": true
   },
   "kubernetes": {
-    "fileMatch": ["^flux/(.+/)patch(Deployment|Cluster|Tenant)\\.ya?ml$"]
+    "fileMatch": [
+      "^flux/(.+/)patches/(deployment|postgresCluster|minioTenant)\\.ya?ml$"
+    ]
   },
   "packageRules": [
     {
@@ -36,7 +38,7 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^flux/(.+/)patch(Cluster)\\.ya?ml$"],
+      "fileMatch": ["^flux/(.+/)patches/(postgresCluster)\\.ya?ml$"],
       "matchStrings": [
         "\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
       ],
