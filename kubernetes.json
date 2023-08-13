@@ -40,7 +40,14 @@
     {
       "fileMatch": ["^flux/(.+/)patches/(postgresCluster)\\.ya?ml$"],
       "matchStrings": [
-        "\\s+(imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+?)(@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?\\s"
+        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^flux/(.+/)patches/(config)\\.ya?ml$"],
+      "matchStrings": [
+        ".+(?:_IMAGE):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
       ],
       "datasourceTemplate": "docker"
     },
