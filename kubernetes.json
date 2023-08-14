@@ -44,14 +44,14 @@
         "^flux/(?:.+/)overlays/(?:.+/)patches/(?:postgresCluster)\\.ya?ml$"
       ],
       "matchStrings": [
-        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
       ],
       "datasourceTemplate": "docker"
     },
     {
       "fileMatch": ["^flux/(?:.+/)overlays/(?:.+/)(?:configmap)\\.ya?ml$"],
       "matchStrings": [
-        ".+(?:_IMAGE):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+        ".+(?:_IMAGE):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
       ],
       "datasourceTemplate": "docker"
     },
