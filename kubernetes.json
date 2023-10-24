@@ -13,7 +13,7 @@
   },
   "kubernetes": {
     "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|postgresCluster|minioTenant)\\.ya?ml$"
+      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulSet|postgresCluster|minioTenant)\\.ya?ml$"
     ]
   },
   "packageRules": [
