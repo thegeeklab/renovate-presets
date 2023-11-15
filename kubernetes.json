@@ -38,8 +38,9 @@
       "enabled": false
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "^flux/(?:.+/)overlays/(?:.+/)patches/(?:postgresCluster)\\.ya?ml$"
       ],
@@ -49,6 +50,7 @@
       "datasourceTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^flux/(?:.+/)overlays/(?:.+/)(?:configmap)\\.ya?ml$"],
       "matchStrings": [
         ".+(?:_IMAGE):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
@@ -56,6 +58,7 @@
       "datasourceTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^flux/crds/.+\\.ya?ml$"],
       "matchStrings": [
         "# renovate: registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*)\\s.+k8up-(?<currentValue>.*?)/.+"
