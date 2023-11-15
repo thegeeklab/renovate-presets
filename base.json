@@ -32,14 +32,16 @@
       "extends": ["schedule:weekly"]
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^Makefile$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
       ]
     },
     {
+      "customType": "regex",
       "fileMatch": [".drone.env"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"

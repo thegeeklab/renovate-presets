@@ -25,7 +25,7 @@
       "description": "Helper tools for docker base images",
       "groupName": "docker helper tools",
       "matchDatasources": ["github-releases"],
-      "matchFileNames": ["Dockerfile*", "docker/Dockerfile*"],
+      "matchManagers": ["dockerfile"],
       "matchPackagePatterns": ["^hairyhenderson", "^aptible", "^thegeeklab"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
@@ -36,9 +36,13 @@
       "pinDigests": false
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["Dockerfile"],
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$",
+        "(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$"
+      ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
       ]
