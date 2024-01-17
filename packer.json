@@ -1,44 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": ["Preset for use with Kubernetes repositories"],
+  "description": ["Preset for use with Hashicorp Packer repositories"],
   "extends": ["github>thegeeklab/renovate-presets:base"],
-  "flux": {
-    "fileMatch": ["^flux/.+\\.ya?ml$"]
-  },
-  "helm-values": {
-    "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:helmRelease)\\.ya?ml$"
-    ],
-    "pinDigests": true
-  },
-  "kubernetes": {
-    "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulSet|postgresCluster|minioTenant)\\.ya?ml$"
-    ]
-  },
-  "packageRules": [
-    {
-      "description": "Set semantic commit scope for docker digests",
-      "groupName": "docker digests",
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pin", "digest"],
-      "semanticCommitScope": "docker"
-    },
-    {
-      "description": "Automerge digest updates (usually security patches)",
-      "groupName": "docker digests",
-      "matchDatasources": ["docker"],
-      "matchPackagePatterns": ["^hetznercloud/hcloud-cloud-controller-manager"],
-      "matchUpdateTypes": ["pin", "digest"],
-      "automerge": true
-    },
-    {
-      "description": "Disable kubernetes-api datasource",
-      "datasources": ["kubernetes-api"],
-      "enabled": false
-    }
-  ],
   "customManagers": [
+    {
+      "fileMatch": ["\\.pkr\\.hcl"],
+      "matchStrings": [
+        "required_version[\\s]+=[\\s]+\"=?(?<currentValue>\\S*)\"",
+        "source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\"[\\s]+version[\\s]+=[\\s]+\"(?<currentValue>\\S*)\"",
+        "version[\\s]+=[\\s]+\"(?<currentValue>\\S*)[\\s]+source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\""
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "{{#if depName}}{{#if (containsString depName 'hashicorp/')}}{{{replace 'hashicorp/' 'hashicorp/packer-plugin-' depName}}}{{else}}{{{depName}}}{{/if}}{{else}}hashicorp/packer{{/if}}"
+    },
     {
       "customType": "regex",
       "fileMatch": [
