@@ -8,7 +8,7 @@
       "matchStrings": [
         "required_version[\\s]+=[\\s]+\"=?(?<currentValue>\\S*)\"",
         "source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\"[\\s]+version[\\s]+=[\\s]+\"(?<currentValue>\\S*)\"",
-        "version[\\s]+=[\\s]+\"(?<currentValue>\\S*)[\\s]+source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\""
+        "version[\\s]+=[\\s]+\"(?<currentValue>\\S*)\"[\\s]+source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\""
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "{{#if depName}}{{#if (containsString depName 'hashicorp/')}}{{{replace 'hashicorp/' 'hashicorp/packer-plugin-' depName}}}{{else}}{{{depName}}}{{/if}}{{else}}hashicorp/packer{{/if}}"
