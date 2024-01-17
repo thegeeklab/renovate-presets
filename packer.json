@@ -11,34 +11,8 @@
         "version[\\s]+=[\\s]+\"(?<currentValue>\\S*)\"[\\s]+source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\""
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "{{#if depName}}{{#if (containsString depName 'hashicorp/')}}{{{replace 'hashicorp/' 'hashicorp/packer-plugin-' depName}}}{{else}}{{{depName}}}{{/if}}{{else}}hashicorp/packer{{/if}}"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:postgresCluster)\\.ya?ml$"
-      ],
-      "matchStrings": [
-        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
-      ],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^flux/(?:.+/)overlays/(?:.+/)(?:configmap)\\.ya?ml$"],
-      "matchStrings": [
-        ".+(?:_IMAGE):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
-      ],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^flux/crds/.+\\.ya?ml$"],
-      "matchStrings": [
-        "# renovate: registryUrl=(?<registryUrl>.*?) chart=(?<depName>.*)\\s.+k8up-(?<currentValue>.*?)/.+"
-      ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}helm{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "depNameTemplate": "{{#if depName}}{{#if (containsString depName 'hashicorp/')}}{{{replace 'hashicorp/' 'hashicorp/packer-plugin-' depName}}}{{else}}{{{depName}}}{{/if}}{{else}}hashicorp/packer{{/if}}",
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ]
 }
