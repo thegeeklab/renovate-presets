@@ -27,7 +27,7 @@
       "description": "Automerge helper tools for docker base images",
       "groupName": "docker helper tools",
       "matchDatasources": ["github-releases"],
-      "matchManagers": ["dockerfile"],
+      "matchManagers": ["regex"],
       "matchPackagePatterns": ["^hairyhenderson", "^aptible", "^thegeeklab"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
