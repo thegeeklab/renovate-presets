@@ -12,6 +12,7 @@
     },
     {
       "description": "Automerge digest updates (usually security patches)",
+      "extends": ["schedule:daily"],
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
       "matchPackagePatterns": [

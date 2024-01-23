@@ -34,12 +34,12 @@
     },
     {
       "description": "Automerge dev dependencies",
+      "extends": ["schedule:weekly"],
       "groupName": "devDeps non-major",
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
-      "automergeType": "branch",
-      "extends": ["schedule:weekly"]
+      "automergeType": "branch"
     }
   ],
   "customManagers": [
