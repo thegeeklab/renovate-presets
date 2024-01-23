@@ -19,10 +19,11 @@
         "^thegeeklab/(alpine|nginx)"
       ],
       "matchUpdateTypes": ["pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
-      "description": "Helper tools for docker base images",
+      "description": "Automerge helper tools for docker base images",
       "groupName": "docker helper tools",
       "matchDatasources": ["github-releases"],
       "matchManagers": ["dockerfile"],

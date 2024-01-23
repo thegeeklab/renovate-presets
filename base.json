@@ -21,14 +21,16 @@
       "matchDatasources": ["github-releases"],
       "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
       "description": "Automerge hugo ci updates",
       "matchManagers": ["woodpecker"],
       "matchPackageNames": ["quay.io/thegeeklab/hugo"],
       "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
       "description": "Automerge dev dependencies",
@@ -36,6 +38,7 @@
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
+      "automergeType": "branch",
       "extends": ["schedule:weekly"]
     }
   ],
