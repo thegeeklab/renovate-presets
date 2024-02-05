@@ -21,7 +21,8 @@
       ],
       "matchUpdateTypes": ["pin", "digest"],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "additionalBranchPrefix": "auto/"
     },
     {
       "description": "Automerge helper tools for docker base images",

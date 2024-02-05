@@ -17,7 +17,8 @@
       "matchPackageNames": ["mvdan/gofumpt", "golangci/golangci-lint"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "additionalBranchPrefix": "auto/"
     },
     {
       "description": "Schedule high frequency packages",

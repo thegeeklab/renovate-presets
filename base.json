@@ -22,7 +22,8 @@
       "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "additionalBranchPrefix": "auto/"
     },
     {
       "description": "Automerge hugo ci updates",
@@ -30,7 +31,8 @@
       "matchPackageNames": ["quay.io/thegeeklab/hugo"],
       "matchUpdateTypes": ["patch"],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "additionalBranchPrefix": "auto/"
     },
     {
       "description": "Automerge dev dependencies",
@@ -39,7 +41,8 @@
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "additionalBranchPrefix": "auto/"
     }
   ],
   "customManagers": [
