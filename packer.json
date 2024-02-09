@@ -4,6 +4,7 @@
   "extends": ["github>thegeeklab/renovate-presets:base"],
   "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["\\.pkr\\.hcl"],
       "matchStrings": [
         "required_version[\\s]+=[\\s]+\"=?(?<currentValue>\\S*)\"",

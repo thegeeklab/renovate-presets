@@ -1,7 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": ["Preset for use with ansible repositories"],
-  "extends": ["github>thegeeklab/renovate-presets:base"],
+  "extends": [
+    "github>thegeeklab/renovate-presets:base",
+    "github>thegeeklab/renovate-presets:opentofu"
+  ],
   "customManagers": [
     {
       "customType": "regex",

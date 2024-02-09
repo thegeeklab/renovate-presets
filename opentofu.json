@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Preset for use with OpenTofu"],
+  "extends": ["github>thegeeklab/renovate-presets:base"],
+  "packageRules": [
+    {
+      "managers": ["terraform"],
+      "matchPackageNames": ["hashicorp/terraform"],
+      "enabled": false
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^terraform/.+\\.tf$",
+        "^.woodpecker/.+\\.ya?ml$",
+        "^.drone.ya?ml$"
+      ],
+      "matchStrings": [
+        "required_version = \"?= (?<currentValue>.*?)\"?\\s",
+        "tofu_version: \"?(?<currentValue>.*?)\"?\\s"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "opentofu/opentofu",
+      "extractVersionTemplate": "^v?(?<version>.*)$"
+    }
+  ]
+}
