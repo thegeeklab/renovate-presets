@@ -11,19 +11,17 @@
   "packageRules": [
     {
       "description": "Automerge golang dev dependencies",
-      "extends": ["schedule:weekly"],
       "groupName": "golang devDeps non-major",
+      "extends": ["schedule:weekly"],
       "matchDatasources": ["github-releases"],
       "matchPackageNames": ["mvdan/gofumpt", "golangci/golangci-lint"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
-      "automerge": true,
-      "automergeType": "branch",
-      "additionalBranchPrefix": "auto/"
+      "automerge": true
     },
     {
       "description": "Schedule high frequency packages",
-      "extends": ["schedule:weekly"],
       "groupName": "golang highFeq non-major",
+      "extends": ["schedule:weekly"],
       "matchDatasources": ["go"],
       "matchPackagePatterns": ["urfave/cli"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"]

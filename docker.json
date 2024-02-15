@@ -12,21 +12,20 @@
     },
     {
       "description": "Automerge digest updates (usually security patches)",
-      "extends": ["schedule:daily"],
       "groupName": "docker digests",
+      "extends": ["schedule:daily"],
       "matchDatasources": ["docker"],
       "matchPackagePatterns": [
         "^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux|centos|debian|golang)",
         "^thegeeklab/(alpine|nginx)"
       ],
       "matchUpdateTypes": ["pin", "digest"],
-      "automerge": true,
-      "automergeType": "branch",
-      "additionalBranchPrefix": "auto/"
+      "automerge": true
     },
     {
       "description": "Automerge helper tools for docker base images",
       "groupName": "docker helper tools",
+      "extends": ["schedule:weekly"],
       "matchDatasources": ["github-releases"],
       "matchManagers": ["regex"],
       "matchPackagePatterns": ["^hairyhenderson", "^aptible", "^thegeeklab"],

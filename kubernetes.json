@@ -27,6 +27,7 @@
     {
       "description": "Automerge digest updates (usually security patches)",
       "groupName": "docker digests",
+      "extends": ["schedule:daily"],
       "matchDatasources": ["docker"],
       "matchPackagePatterns": ["^hetznercloud/hcloud-cloud-controller-manager"],
       "matchUpdateTypes": ["pin", "digest"],
