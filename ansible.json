@@ -8,10 +8,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "^(ansible/)?(group_vars|services)/.*?$",
-        "^(ansible/)?inventory/group_vars/.*?$"
-      ],
+      "fileMatch": ["^(ansible/)?.+/group_vars/.+?$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n(?<roleName>\\S+?)_version: \"?(?<currentValue>.*?)\"?\\s"
       ]
