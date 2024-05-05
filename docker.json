@@ -36,6 +36,11 @@
       "description": "Disable digest pinning for Compose (development only)",
       "matchManagers": ["docker-compose"],
       "pinDigests": false
+    },
+    {
+      "description": "Disable digest pinning for testdata",
+      "matchFileNames": ["testdata/**"],
+      "pinDigests": false
     }
   ],
   "customManagers": [
