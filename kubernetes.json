@@ -43,10 +43,11 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:postgresCluster)\\.ya?ml$"
+        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:statefulSet|postgresCluster)\\.ya?ml$"
       ],
       "matchStrings": [
-        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+        "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?",
+        "\\s+(?:image):\\s+&\\S+\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
       ],
       "datasourceTemplate": "docker"
     },
