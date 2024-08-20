@@ -12,7 +12,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^terraform/.+.tf$", "^.woodpecker.ya?ml$"],
+      "fileMatch": ["^terraform/.+.tf$", "^.woodpecker/.+.ya?ml$"],
       "matchStrings": [
         "required_version = \"?([=><\\s]+)?(?<currentValue>[^\"]+)\"?",
         "tofu_version: \"?(?<currentValue>.*?)\"?\\s"
