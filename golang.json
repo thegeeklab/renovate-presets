@@ -45,7 +45,7 @@
     },
     {
       "groupName": "update golang",
-      "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{groupName}} {{updateType}} version",
+      "commitMessage": "{{{commitMessagePrefix}}} {{groupName}} {{updateType}} version",
       "matchDatasources": ["docker", "golang-version"],
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
     }
