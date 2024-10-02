@@ -33,7 +33,7 @@
     },
     {
       "description": "Disable golang toolchain updates",
-      "matchCategories": ["golang"],
+      "matchManagers": ["gomod"],
       "matchDepTypes": ["toolchain"],
       "enabled": false
     },
