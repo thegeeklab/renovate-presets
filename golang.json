@@ -42,6 +42,12 @@
       "matchDatasources": ["docker"],
       "matchPackagePatterns": ["techknowlogick/xgo"],
       "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.x$"
+    },
+    {
+      "groupName": "update golang",
+      "matchDatasources": ["docker", "golang-version"],
+      "commitMessageExtra": "{{updateType}} version to {{newVersion}}",
+      "matchPackagePaatterns": ["techknowlogick/xgo", "golang", "go"]
     }
   ]
 }
