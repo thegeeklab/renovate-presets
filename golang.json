@@ -25,6 +25,23 @@
       "matchDatasources": ["go"],
       "matchPackagePatterns": ["urfave/cli"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"]
+    },
+    {
+      "description": "Enable golang version updates",
+      "matchDatasources": ["golang-version"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Disable golang toolchain updates",
+      "matchCategories": ["golang"],
+      "matchDepTypes": ["toolchain"],
+      "enabled": false
+    },
+    {
+      "description": "Extract version from xgo container tags",
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["techknowlogick/xgo"],
+      "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.x$"
     }
   ]
 }
