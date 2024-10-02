@@ -44,12 +44,9 @@
       "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.x$"
     },
     {
-      "groupName": "golang",
-      "group": {
-        "commitMessageExtra": ""
-      },
+      "groupName": "update golang",
+      "commitMessage": "{{groupName}} {{updateType}} version to {{newVersion}}",
       "matchDatasources": ["docker", "golang-version"],
-      "commitMessageExtra": "{{updateType}} version to {{newVersion}}",
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
     }
   ]
