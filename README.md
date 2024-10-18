@@ -4,4 +4,4 @@ This repository is used for internal renovate presets for `thegeeklab` organizat
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/thegeeklab/renovate-presets/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/thegeeklab/renovate-presets/blob/main/LICENSE) file for details.
