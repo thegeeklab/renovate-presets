@@ -51,12 +51,13 @@
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
     },
     {
-      "description": "Autmerge update go patch version",
+      "description": "Automerge go patch version updates",
       "extends": ["schedule:weekly"],
       "groupName": "golang patch",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["patch"],
-      "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
+      "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"],
+      "automerge": true
     }
   ]
 }
