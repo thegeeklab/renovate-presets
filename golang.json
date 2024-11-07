@@ -45,7 +45,7 @@
     },
     {
       "description": "Group golang version updates",
-      "groupName": "golang",
+      "groupName": "golang version",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["minor", "major"],
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
@@ -53,7 +53,7 @@
     {
       "description": "Automerge go patch version updates",
       "extends": ["schedule:weekly"],
-      "groupName": "golang patch",
+      "groupName": "golang patch version",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["patch"],
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"],
