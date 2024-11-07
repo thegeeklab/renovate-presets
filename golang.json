@@ -41,22 +41,22 @@
       "description": "Extract version from xgo container tags",
       "matchDatasources": ["docker"],
       "matchPackagePatterns": ["techknowlogick/xgo"],
-      "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.x$"
+      "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     },
     {
       "description": "Group golang version updates",
-      "groupName": "update golang",
-      "commitMessage": "{{{commitMessagePrefix}}} {{#if groupName}}{{{groupName}}}{{else}}update {{{depName}}}{{/if}} {{updateType}} version",
+      "groupName": "golang",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["minor", "major"],
       "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
     },
     {
-      "groupName": "Autmerge update go patch version",
-      "matchDatasources": ["golang-version"],
+      "description": "Autmerge update go patch version",
+      "extends": ["schedule:weekly"],
+      "groupName": "golang patch",
+      "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["patch"],
-      "matchPackagePatterns": ["go"],
-      "automerge": true
+      "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
     }
   ]
 }
