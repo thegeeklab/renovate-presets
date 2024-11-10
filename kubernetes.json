@@ -49,7 +49,8 @@
       ],
       "matchStrings": [
         "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?",
-        "\\s+(?:image):\\s+&\\S+\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+        "\\s+(?:image):\\s+&\\S+\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?",
+        "- name:.+_IMAGE\\n\\s*value:\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
       ],
       "datasourceTemplate": "docker"
     },
