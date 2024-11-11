@@ -45,7 +45,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:statefulSet|postgresCluster)\\.ya?ml$"
+        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulSet|postgresCluster)\\.ya?ml$"
       ],
       "matchStrings": [
         "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?",
