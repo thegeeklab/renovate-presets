@@ -14,7 +14,11 @@
       "groupName": "golang devDeps non-major",
       "extends": ["schedule:weekly"],
       "matchDatasources": ["github-releases"],
-      "matchPackageNames": ["mvdan/gofumpt", "golangci/golangci-lint"],
+      "matchPackageNames": [
+        "stretchr/testify",
+        "mvdan/gofumpt",
+        "golangci/golangci-lint"
+      ],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true
     },
