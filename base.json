@@ -20,7 +20,7 @@
       "description": "Automerge docs theme updates",
       "extends": ["schedule:daily"],
       "matchDatasources": ["github-releases"],
-      "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
+      "matchPackageNames": ["/^thegeeklab/hugo-(geekdoc|geekblog)/"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },

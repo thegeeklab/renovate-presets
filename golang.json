@@ -27,7 +27,7 @@
       "groupName": "golang highFeq non-major",
       "extends": ["schedule:weekly"],
       "matchDatasources": ["go"],
-      "matchPackagePatterns": ["urfave/cli"],
+      "matchPackageNames": ["/urfave/cli/"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"]
     },
     {
@@ -44,7 +44,7 @@
     {
       "description": "Extract version from xgo container tags",
       "matchDatasources": ["docker"],
-      "matchPackagePatterns": ["techknowlogick/xgo"],
+      "matchPackageNames": ["/techknowlogick/xgo/"],
       "versioning": "regex:^go-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     },
     {
@@ -52,7 +52,7 @@
       "groupName": "golang version",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["minor", "major"],
-      "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"]
+      "matchPackageNames": ["/techknowlogick/xgo/", "golang", "go"]
     },
     {
       "description": "Automerge go patch version updates",
@@ -60,7 +60,7 @@
       "groupName": "golang patch version",
       "matchDatasources": ["docker", "golang-version"],
       "matchUpdateTypes": ["patch"],
-      "matchPackagePatterns": ["techknowlogick/xgo", "golang", "go"],
+      "matchPackageNames": ["/techknowlogick/xgo/", "golang", "go"],
       "automerge": true
     }
   ]

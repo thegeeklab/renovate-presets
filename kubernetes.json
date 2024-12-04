@@ -31,7 +31,7 @@
       "groupName": "docker digests",
       "extends": ["schedule:daily"],
       "matchDatasources": ["docker"],
-      "matchPackagePatterns": ["^hetznercloud/hcloud-cloud-controller-manager"],
+      "matchPackageNames": ["/^hetznercloud/hcloud-cloud-controller-manager/"],
       "matchUpdateTypes": ["pin", "digest"],
       "automerge": true
     },
