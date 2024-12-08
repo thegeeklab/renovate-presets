@@ -28,7 +28,7 @@
       "description": "Automerge hugo ci updates",
       "extends": ["schedule:weekly"],
       "matchManagers": ["woodpecker"],
-      "matchPackageNames": ["quay.io/thegeeklab/hugo"],
+      "matchPackageNames": ["ghcr.io/gohugoio/hugo"],
       "matchUpdateTypes": ["patch"],
       "automerge": true
     },
