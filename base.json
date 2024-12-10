@@ -25,14 +25,6 @@
       "automerge": true
     },
     {
-      "description": "Automerge hugo ci updates",
-      "extends": ["schedule:weekly"],
-      "matchManagers": ["woodpecker"],
-      "matchPackageNames": ["ghcr.io/gohugoio/hugo"],
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
-    },
-    {
       "description": "Automerge dev dependencies",
       "extends": ["schedule:weekly"],
       "groupName": "devDeps non-major",
