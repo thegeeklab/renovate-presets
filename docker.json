@@ -27,7 +27,7 @@
       "groupName": "docker helper tools",
       "extends": ["schedule:weekly"],
       "matchDatasources": ["github-releases"],
-      "matchManagers": ["regex"],
+      "matchManagers": ["custom.regex"],
       "matchPackageNames": ["/^hairyhenderson/", "/^aptible/", "/^thegeeklab/"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
