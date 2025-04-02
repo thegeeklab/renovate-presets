@@ -14,7 +14,7 @@
   },
   "kubernetes": {
     "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulSet|postgresCluster|minioTenant)\\.ya?ml$",
+      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|cronJob|statefulSet|postgresCluster|minioTenant)\\.ya?ml$",
       "^ansible/services/(?:.+/)kustomization/(?:.+/)component.ya?ml$"
     ]
   },
