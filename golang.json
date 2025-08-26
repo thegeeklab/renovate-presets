@@ -13,7 +13,7 @@
       "description": "Automerge golang dev dependencies",
       "groupName": "golang devDeps non-major",
       "extends": ["schedule:weekly"],
-      "matchDatasources": ["github-releases"],
+      "matchDatasources": ["github-releases", "go"],
       "matchPackageNames": [
         "github.com/stretchr/testify",
         "mvdan/gofumpt",
