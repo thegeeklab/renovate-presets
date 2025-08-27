@@ -17,7 +17,8 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": [
         "/^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux|centos|debian|golang)/",
-        "/^thegeeklab/(alpine|nginx)/"
+        "/^thegeeklab/(alpine|nginx)/",
+        "/^distroless/static"
       ],
       "matchUpdateTypes": ["pin", "digest"],
       "automerge": true
