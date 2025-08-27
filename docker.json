@@ -18,7 +18,7 @@
       "matchPackageNames": [
         "/^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux|centos|debian|golang)/",
         "/^thegeeklab/(alpine|nginx)/",
-        "/^gcr.io/distroless/static"
+        "/^gcr.io/distroless/static/"
       ],
       "matchUpdateTypes": ["pin", "digest"],
       "automerge": true
