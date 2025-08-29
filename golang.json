@@ -15,6 +15,7 @@
       "extends": ["schedule:weekly"],
       "matchDatasources": ["github-releases", "go"],
       "matchPackageNames": [
+        "/^github.com/onsi/ginkgo/",
         "github.com/stretchr/testify",
         "mvdan/gofumpt",
         "golangci/golangci-lint"
