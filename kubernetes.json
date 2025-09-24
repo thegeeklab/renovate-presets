@@ -70,6 +70,14 @@
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}helm{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/flux/apps/.+/kustomization.ya?ml$/"],
+      "matchStrings": [
+        "https://github\\.com/(?<depName>[^/]+/[^/]+)(//.*?)?\\?ref=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "github-tag"
     }
   ]
 }
