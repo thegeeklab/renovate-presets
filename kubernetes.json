@@ -7,14 +7,14 @@
   },
   "helm-values": {
     "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:helmRelease)\\.ya?ml$",
+      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:helmrelease)\\.ya?ml$",
       "^ansible/services/(?:.+/)helm/(?:.+/)release.ya?ml$"
     ],
     "pinDigests": true
   },
   "kubernetes": {
     "fileMatch": [
-      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|cronJob|statefulSet|postgresCluster|minioTenant)\\.ya?ml$",
+      "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|cronjob|statefulset|postgrescluster|minioTenant)\\.ya?ml$",
       "^ansible/services/(?:.+/)kustomization/(?:.+/)component.ya?ml$"
     ]
   },
@@ -45,7 +45,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulSet|postgresCluster)\\.ya?ml$"
+        "^flux/(?:.+/)overlays/(?:.+/)patches/(?:deployment|statefulset|postgrescluster)\\.ya?ml$"
       ],
       "matchStrings": [
         "\\s+(?:imageName):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?",
