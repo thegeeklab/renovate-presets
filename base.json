@@ -31,6 +31,14 @@
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
       "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true
+    },
+    {
+      "description": "Automerge ci tools",
+      "extends": ["schedule:weekly"],
+      "groupName": "ci tools non-major",
+      "matchPackageNames": ["docker.io/lycheeverse/lychee"],
+      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true
     }
   ],
   "customManagers": [
