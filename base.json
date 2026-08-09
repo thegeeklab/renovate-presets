@@ -5,12 +5,17 @@
     "config:recommended",
     ":dependencyDashboard",
     ":semanticCommits",
-    ":semanticCommitScope(deps)",
+    ":semanticCommitType(build)",
     "docker:enableMajor",
     ":masterIssue",
     "group:linters",
     ":maintainLockFilesWeekly"
   ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "semanticCommitType": "fix",
+    "semanticCommitScope": "security"
+  },
   "branchNameStrict": false,
   "docker": {
     "pinDigests": true
