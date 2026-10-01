@@ -77,7 +77,7 @@
       "matchStrings": [
         "https://github\\.com/(?<depName>[^/]+/[^/]+)(//.*?)?\\?ref=(?<currentValue>[^\\s]+)"
       ],
-      "datasourceTemplate": "github-tag"
+      "datasourceTemplate": "github-tags"
     }
   ]
 }
