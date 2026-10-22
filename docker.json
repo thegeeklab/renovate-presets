@@ -16,8 +16,7 @@
       "extends": ["schedule:daily"],
       "matchDatasources": ["docker"],
       "matchPackageNames": [
-        "/^((amd64|arm32v7|arm64v8)/)?(python|alpine|node|docker|rockylinux|centos|debian|golang)/",
-        "/^thegeeklab/(alpine|nginx)/",
+        "/^docker.io/library/(?:docker|python|alpine|node|rockylinux|centos|debian|golang|busybox)/",
         "/^gcr.io/distroless/static/"
       ],
       "matchUpdateTypes": ["pin", "digest"],
@@ -48,12 +47,12 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$",
-        "(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$"
+        "(?:^|/|\\.)(?:[Dd]ocker|[Cc]ontainer)file$",
+        "(?:^|/)(?:[Dd]ocker|[Cc]ontainer)file[^/]*$"
       ],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s",
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"?(?<currentValue>[^${}\"\\s]+)\"?"
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s",
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"?(?<currentValue>[^${}\"\\s]+)\"?"
       ]
     }
   ]

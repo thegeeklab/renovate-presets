@@ -14,7 +14,7 @@
       "customType": "regex",
       "fileMatch": ["^terraform/.+.tf$", "^.woodpecker/.+.ya?ml$"],
       "matchStrings": [
-        "required_version = \"?([=><\\s]+)?(?<currentValue>[^\"]+)\"?",
+        "required_version = \"?(?:[=><\\s]+)?(?<currentValue>[^\"]+)\"?",
         "tofu_version: \"?(?<currentValue>.*?)\"?\\s"
       ],
       "datasourceTemplate": "github-releases",

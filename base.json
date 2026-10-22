@@ -25,7 +25,7 @@
       "description": "Automerge docs theme updates",
       "extends": ["schedule:daily"],
       "matchDatasources": ["github-releases"],
-      "matchPackageNames": ["/^thegeeklab/hugo-(geekdoc|geekblog)/"],
+      "matchPackageNames": ["/^thegeeklab/hugo-(?:geekdoc|geekblog)/"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
@@ -54,14 +54,14 @@
       "customType": "regex",
       "fileMatch": ["^Makefile$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: registryUrl=(?<registryUrl>.*?))?(?: versioning=(?<versioning>.*?))?\\n.*?_VERSION (?::|\\?)= (?<currentValue>.*)\\s"
       ]
     },
     {
       "customType": "regex",
       "fileMatch": [".drone.env"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>.*?))?( versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: registryUrl=(?<registryUrl>.*?))?(?: versioning=(?<versioning>.*?))?\\nexport .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
       ]
     }
   ],
