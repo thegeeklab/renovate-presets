@@ -20,7 +20,7 @@
         "mvdan/gofumpt",
         "golangci/golangci-lint"
       ],
-      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest", "patch", "minor"],
       "automerge": true
     },
     {
@@ -29,7 +29,7 @@
       "extends": ["schedule:weekly"],
       "matchDatasources": ["go"],
       "matchPackageNames": ["/urfave/cli/"],
-      "matchUpdateTypes": ["pin", "digest", "patch", "minor"]
+      "matchUpdateTypes": ["pin", "pinDigest", "digest", "patch", "minor"]
     },
     {
       "description": "Enable golang version updates",

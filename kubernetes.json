@@ -23,7 +23,7 @@
       "description": "Set semantic commit scope for docker digests",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest"],
       "semanticCommitScope": "docker"
     },
     {
@@ -32,7 +32,7 @@
       "extends": ["schedule:daily"],
       "matchDatasources": ["docker"],
       "matchPackageNames": ["/^hetznercloud/hcloud-cloud-controller-manager/"],
-      "matchUpdateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest"],
       "automerge": true
     },
     {

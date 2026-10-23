@@ -34,7 +34,7 @@
       "extends": ["schedule:weekly"],
       "groupName": "devDeps non-major",
       "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
-      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest", "patch", "minor"],
       "automerge": true
     },
     {
@@ -45,7 +45,7 @@
         "docker.io/lycheeverse/lychee",
         "ghcr.io/aquasecurity/trivy"
       ],
-      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest", "patch", "minor"],
       "automerge": true
     }
   ],

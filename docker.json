@@ -7,7 +7,7 @@
       "description": "Set semantic commit scope for docker digests",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest"],
       "semanticCommitScope": "docker"
     },
     {
@@ -19,7 +19,7 @@
         "/^docker.io/library/(?:docker|python|alpine|node|rockylinux|centos|debian|golang|busybox)/",
         "/^gcr.io/distroless/static/"
       ],
-      "matchUpdateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "pinDigest", "digest"],
       "automerge": true
     },
     {
