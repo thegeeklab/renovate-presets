@@ -17,7 +17,8 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": [
         "/^docker.io/library/(?:docker|python|alpine|node|rockylinux|centos|debian|golang|busybox)/",
-        "/^gcr.io/distroless/static/"
+        "/^gcr.io/distroless/static/",
+        "/^ghcr.io/home-operations/flate/"
       ],
       "matchUpdateTypes": ["pin", "pinDigest", "digest"],
       "automerge": true
