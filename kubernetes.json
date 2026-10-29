@@ -78,6 +78,14 @@
         "https://github\\.com/(?<depName>[^/]+/[^/]+)(?://.*?)?\\?ref=(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "github-tags"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^flux/(?:.+/)overlays/.+/(?:renovatejob|envoy)\\.ya?ml$"],
+      "matchStrings": [
+        "\\s+(?:image):\\s+\"?'?(?<depName>[^:\\s]+):(?<currentValue>[^\"'@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\"?'?"
+      ],
+      "datasourceTemplate": "docker"
     }
   ]
 }
