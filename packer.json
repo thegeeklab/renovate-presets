@@ -12,7 +12,7 @@
         "version[\\s]+=[\\s]+\"(?<currentValue>\\S*)\"[\\s]+source[\\s]+=[\\s]+\"github.com/(?<depName>\\S*)\""
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "{{#if depName}}{{#if (containsString depName 'hashicorp/')}}{{{replace 'hashicorp/' 'hashicorp/packer-plugin-' depName}}}{{else}}{{{depName}}}{{/if}}{{else}}hashicorp/packer{{/if}}",
+      "depNameTemplate": "{{#if depName}}{{{replace '^([^/]+)/(.+)$' '$1/packer-plugin-$2' depName}}}{{else}}hashicorp/packer{{/if}}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ]
