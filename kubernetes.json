@@ -20,13 +20,6 @@
   },
   "packageRules": [
     {
-      "description": "Pin digests for docker images detected by regex managers",
-      "matchManagers": ["custom.regex"],
-      "matchDatasources": ["docker"],
-      "matchFileNames": ["flux/**/overlays/**"],
-      "pinDigests": true
-    },
-    {
       "description": "Set semantic commit scope for docker digests",
       "groupName": "docker digests",
       "matchDatasources": ["docker"],

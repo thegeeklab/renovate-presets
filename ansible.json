@@ -5,15 +5,6 @@
     "github>thegeeklab/renovate-presets:base",
     "github>thegeeklab/renovate-presets:opentofu"
   ],
-  "packageRules": [
-    {
-      "description": "Pin digests for docker images detected by regex managers",
-      "matchManagers": ["custom.regex"],
-      "matchDatasources": ["docker"],
-      "matchFileNames": ["**/group_vars/**"],
-      "pinDigests": true
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",
